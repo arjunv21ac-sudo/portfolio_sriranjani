@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sriranjani S | Java Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+:root{--bg:#05060f;--p1:#22d3ee;--p2:#a855f7;--p3:#f472b6;--text:#e6ecff;--muted:#93a0c4;--glass:rgba(255,255,255,.05);--gb:rgba(255,255,255,.13);--grid:rgba(34,211,238,.07);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f2f5ff;--p1:#0891b2;--p2:#7c3aed;--p3:#db2777;--text:#0d1330;--muted:#4a5578;--glass:rgba(255,255,255,.62);--gb:rgba(110,120,200,.3);--grid:rgba(8,145,178,.09)}}
+:root[data-theme="light"]{--bg:#f2f5ff;--p1:#0891b2;--p2:#7c3aed;--p3:#db2777;--text:#0d1330;--muted:#4a5578;--glass:rgba(255,255,255,.62);--gb:rgba(110,120,200,.3);--grid:rgba(8,145,178,.09)}
+:root[data-theme="dark"]{--bg:#05060f;--text:#e6ecff}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(88px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:400 16px/1.65 "Space Grotesk",system-ui,-apple-system,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Orbitron,"Space Grotesk",system-ui,sans-serif;margin:0;line-height:1.2}
+a{color:inherit}:focus-visible{outline:2px solid var(--p1);outline-offset:3px}
+#cv{position:fixed;inset:0;z-index:-2;width:100%;height:100%}
+.grid-bg{position:fixed;inset:0;z-index:-3;background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;animation:gm 8s linear infinite;-webkit-mask:radial-gradient(ellipse at 50% 30%,#000,transparent 75%);mask:radial-gradient(ellipse at 50% 30%,#000,transparent 75%)}
+@keyframes gm{to{background-position:0 48px}}
+.orb{position:fixed;z-index:-2;border-radius:50%;filter:blur(110px);opacity:.28;animation:fl 14s ease-in-out infinite alternate}
+.o1{width:420px;height:420px;background:var(--p2);top:-120px;right:-100px}.o2{width:380px;height:380px;background:var(--p1);bottom:-100px;left:-100px;animation-delay:-6s}
+@keyframes fl{to{transform:translate(-60px,80px) scale(1.2)}}
+.glow{position:fixed;top:0;left:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--p1) 22%,transparent),transparent 65%);pointer-events:none;z-index:-1;will-change:transform}
+@media (pointer:coarse){.glow{display:none}}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:30;background:linear-gradient(90deg,var(--p1),var(--p2),var(--p3));box-shadow:0 0 12px var(--p1)}
+.boot{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-content:center;gap:16px;text-align:center;font:600 14px Orbitron,sans-serif;letter-spacing:.3em;color:var(--p1);transition:opacity .7s,visibility .7s}
+.boot.off{opacity:0;visibility:hidden}.boot .bar{width:220px;height:3px;background:var(--gb);border-radius:3px;overflow:hidden}.boot .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--p1),var(--p3))}
+.glass{background:var(--glass);border:1px solid var(--gb);border-radius:22px;-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:0;right:0;z-index:20}
+nav .glass{display:flex;align-items:center;justify-content:space-between;padding:9px 12px 9px 20px;border-radius:999px}
+.logo{font:800 17px Orbitron,sans-serif;text-decoration:none;background:linear-gradient(90deg,var(--p1),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:2px}.links a{text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);padding:8px 13px;border-radius:999px;transition:.25s}
+.links a:hover,.links a.on{color:var(--text);background:color-mix(in srgb,var(--p1) 16%,transparent);box-shadow:0 0 16px color-mix(in srgb,var(--p1) 35%,transparent)}
+.ib{background:none;border:0;color:var(--text);cursor:pointer;font-size:18px;padding:6px 10px}.burger{display:none}
+section{padding:84px 0 6px}
+h2{font-size:clamp(24px,4vw,34px);margin-bottom:30px;display:flex;align-items:center;gap:14px}
+h2 small{font:600 13px "Space Grotesk";color:var(--p1);letter-spacing:.2em}h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--p1),transparent)}
+.hero{padding-top:130px}.hg{display:grid;gap:30px;align-items:center}
+@media (min-width:860px){.hg{grid-template-columns:1.35fr 1fr}}
+.pill{display:inline-flex;gap:9px;align-items:center;font:500 12px "Space Grotesk";letter-spacing:.1em;padding:7px 15px;border-radius:999px;border:1px solid var(--gb);background:var(--glass);color:var(--p1)}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pl 1.8s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}80%,100%{box-shadow:0 0 0 10px rgba(34,197,94,0)}}
+h1{font-size:clamp(36px,8.5vw,76px);font-weight:800;margin:22px 0 10px;background:linear-gradient(90deg,var(--text),var(--p1),var(--p2),var(--p3),var(--text));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 7s linear infinite;position:relative;display:inline-block}
+@keyframes sh{to{background-position:-300% 0}}
+h1::before,h1::after{content:attr(data-text);position:absolute;inset:0;background:none;color:var(--p1);-webkit-text-fill-color:var(--p1);opacity:.7;clip-path:inset(0 0 100% 0);animation:gl 5s infinite}
+h1::after{color:var(--p3);-webkit-text-fill-color:var(--p3);animation-delay:.15s}
+@keyframes gl{0%,90%,100%{clip-path:inset(0 0 100% 0);transform:none}92%{clip-path:inset(20% 0 55% 0);transform:translate(-4px)}94%{clip-path:inset(60% 0 10% 0);transform:translate(4px)}96%{clip-path:inset(40% 0 35% 0);transform:translate(-2px)}}
+.role{font:600 clamp(15px,2.6vw,21px) Orbitron,sans-serif;color:var(--p1);min-height:1.5em;text-shadow:0 0 18px var(--p1)}
+.role i{animation:bl 1s steps(2) infinite;font-style:normal}@keyframes bl{50%{opacity:0}}
+.lead{color:var(--muted);max-width:56ch;margin:18px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{text-decoration:none;font-weight:600;padding:13px 26px;border-radius:999px;border:1px solid var(--gb);background:var(--glass);transition:.3s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--p1) 40%,transparent)}
+.btn.pri{background:linear-gradient(120deg,var(--p1),var(--p2),var(--p3));background-size:200% 100%;color:#fff;border-color:transparent;animation:sh2 4s linear infinite}
+@keyframes sh2{to{background-position:200% 0}}
+.orbit{position:relative;width:min(320px,72vw);aspect-ratio:1;margin:auto;display:grid;place-items:center}
+.r{position:absolute;border:1px dashed var(--gb);border-radius:50%;animation:rot 16s linear infinite}
+.r1{inset:0}.r2{inset:15%;animation-duration:10s;animation-direction:reverse}.r3{inset:30%;animation-duration:6s}
+.r b{position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:var(--p1);box-shadow:0 0 16px var(--p1)}
+.r2 b{background:var(--p2);box-shadow:0 0 16px var(--p2)}.r3 b{background:var(--p3);box-shadow:0 0 16px var(--p3)}
+@keyframes rot{to{transform:rotate(360deg)}}
+.core{width:34%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:800 clamp(20px,5vw,30px) Orbitron;background:radial-gradient(circle at 30% 30%,color-mix(in srgb,var(--p1) 45%,transparent),color-mix(in srgb,var(--p2) 35%,transparent));border:1px solid var(--gb);box-shadow:0 0 50px color-mix(in srgb,var(--p2) 55%,transparent);animation:fy 4s ease-in-out infinite alternate}
+@keyframes fy{to{transform:translateY(-10px) scale(1.06)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.stat{padding:16px 8px;text-align:center}.stat b{display:block;font:800 clamp(18px,4vw,28px) Orbitron;color:var(--p1)}.stat span{font-size:12px;color:var(--muted)}
+.mq{overflow:hidden;margin-top:56px;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mt{display:flex;gap:36px;width:max-content;animation:mq 26s linear infinite;font:600 15px Orbitron;letter-spacing:.15em;color:var(--muted)}
+.mt span::before{content:"◆ ";color:var(--p3)}@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(44px) scale(.96);filter:blur(8px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) var(--d,0ms),transform .9s cubic-bezier(.2,.8,.2,1) var(--d,0ms),filter .9s var(--d,0ms)}
+.rv.in{opacity:1;transform:none;filter:none}
+.card{position:relative;padding:24px;height:100%;transition:transform .18s ease-out;transform-style:preserve-3d;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:conic-gradient(from var(--a),transparent 55%,var(--p1),var(--p2),var(--p3),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:sp 6s linear infinite;pointer-events:none}
+@keyframes sp{to{--a:360deg}}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--p1) 16%,transparent),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::after{opacity:1}
+.card h3{font-size:15px;margin-bottom:14px;letter-spacing:.04em}.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12.5px;font-weight:500;padding:6px 13px;border-radius:999px;border:1px solid color-mix(in srgb,var(--p1) 35%,transparent);color:var(--p1);background:color-mix(in srgb,var(--p1) 8%,transparent);transition:.25s}
+.chip:hover{transform:translateY(-3px) scale(1.06);box-shadow:0 0 18px color-mix(in srgb,var(--p1) 55%,transparent)}
+.about{padding:clamp(22px,4vw,38px);color:var(--muted);font-size:17px}.about b{color:var(--text);font-weight:600}
+.m{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 16px}.m div{padding:12px 4px;text-align:center;border-radius:14px;background:color-mix(in srgb,var(--p2) 10%,transparent);border:1px solid var(--gb)}
+.m b{display:block;font:800 clamp(16px,3.6vw,22px) Orbitron;color:var(--p3)}.m span{font-size:11px;color:var(--muted);line-height:1.3;display:block}
+.card ul{margin:0 0 14px;padding-left:18px;color:var(--muted);font-size:14.5px}.card li{margin-bottom:7px}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;color:var(--muted);font-size:13.5px;margin:-6px 0 12px}
+.tl{position:relative;padding-left:28px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--p1),var(--p2),var(--p3));box-shadow:0 0 12px var(--p1)}
+.tl>div{position:relative}.tl>div::before{content:"";position:absolute;left:-28px;top:28px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--p1);box-shadow:0 0 14px var(--p1);animation:pl2 2.4s infinite;z-index:1}
+@keyframes pl2{50%{box-shadow:0 0 22px var(--p3);border-color:var(--p3)}}
+.sub{font:600 13px Orbitron;letter-spacing:.15em;color:var(--p3);margin:34px 0 16px}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;text-align:left}
+.cg a{text-decoration:none;padding:16px 18px;border-radius:16px;border:1px solid var(--gb);background:var(--glass);overflow-wrap:anywhere;transition:.3s}
+.cg a:hover{transform:translateY(-4px);border-color:var(--p1);box-shadow:0 10px 30px color-mix(in srgb,var(--p1) 30%,transparent)}
+.cg small{display:block;color:var(--p1);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.contact{padding:clamp(24px,5vw,46px);text-align:center}.contact p{color:var(--muted);max-width:50ch;margin:0 auto 26px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:44px 0 34px}
+@media (max-width:760px){.links{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;padding:10px;border-radius:22px;background:var(--bg);border:1px solid var(--gb)}.links.open{display:flex}.links a{padding:12px 14px}.burger{display:inline-block}.hero{padding-top:110px}.stats{gap:8px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="orb o1"></div><div class="orb o2"></div><canvas id="cv"></canvas><div class="glow" id="glow"></div><div class="prog" id="prog"></div>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect,useRef}=React;const h=React.createElement;
+const D={
+ email:"sriranjanisivananthan@gmail.com",phone:"+91 98849 25070",li:"https://linkedin.com/in/sriranjanisiva",
+ roles:["Software Developer","Java Full Stack","Python | SQL","ML + Embedded Builder"],
+ marquee:["JAVA","PYTHON","SQL / MYSQL","HTML5","CSS3","JAVASCRIPT","OOP","DSA","GIT","ARDUINO","SCIKIT-LEARN","PANDAS"],
+ skills:{"Languages":["Java","Python"],"Database":["SQL / MySQL","DDL","DML","Joins","Aggregations","Subqueries"],"Web Technologies":["HTML5","CSS3","JavaScript"],"CS Fundamentals":["OOP","Data Structures & Algorithms"],"Tools":["Git","Arduino IDE","MS Excel"]},
+ proj:[
+  {t:"ML System for Student Personality & Academic Performance",d:"Jan 2025 – Mar 2025",g:["Python","Machine Learning","Scikit-learn","Pandas","Data Analysis"],
+   m:[[85,"","%+","prediction accuracy"],[500,"","+","student records"],[60,"~","%","less manual effort"]],
+   p:["Engineered an ML classifier that helps educators spot at-risk students before performance declines.","Automated the data analysis pipeline, freeing teaching staff for direct student support.","Built a personalised recommendation engine mapping each student to targeted intervention paths, adopted as a proof of concept."]},
+  {t:"Anti-Sleep Alarm Device (Eye Blink Sensor & Arduino)",d:"Aug 2024 – Nov 2024",g:["Arduino","Embedded C","IR Sensor","Real-Time Systems"],
+   m:[[200,"<","ms","alarm latency"],[100,"","+","test scenarios"],[40,"~","%","fewer false alarms"]],
+   p:["Built a real-time drowsiness detector that triggers an audio alert on fatigue detection.","Tuned the IR blink-frequency threshold for reliable detection under varied lighting.","Delivered a zero-failure prototype on time and demonstrated it to an academic panel."]}],
+ train:[
+  {t:"Java Full Stack Development",o:"Qspiders, Chennai",d:"Ongoing",p:["Advancing in Core Java, OOP, Collections, JDBC, SQL, HTML5, CSS3 and JavaScript through project-based learning.","Building full-stack mini-applications."]},
+  {t:"Python Programming Internship",o:"Qriocity, Chennai",d:"3 Months",p:["Delivered Python automation scripts for real-world data-handling tasks, cutting manual processing time by ~30%."]},
+  {t:"In-Plant Training",o:"TVS Motor Company Limited, Hosur",d:"3 Months",p:["Analysed production workflows and quality-control systems in a high-volume industrial setting."]}],
+ edu:[["B.E., Electronics & Communication Engineering","Adhiyamaan College of Engineering, Hosur","Nov 2021 – May 2025","CGPA 8.9 / 10"],["Higher Secondary Certificate (Science)","TTA Matric Higher Secondary School, Chennai","Jun 2020 – Mar 2021","81.7%"],["SSLC","TTA Matric Higher Secondary School, Chennai","Jun 2018 – Mar 2019","77%"]],
+ cert:[["Application Developer, Web & Mobile Front-End","NCVET & PMKVY · 540 Hours · Grade A · 2024"],["SQL for Data Science","Coursera · Querying, joins, aggregations & analytics"],["National-Level Symposium, Cybersecurity","SIMATS Engineering · Selected participant"],["Paper Presentation: Electric Vehicles in IoT","Karunya University · EV & IoT research"]]
+};
+const NAV=["about","skills","projects","training","education","contact"];
+function useClock(){const[t,s]=useState(new Date());useEffect(()=>{const i=setInterval(()=>s(new Date()),1000);return()=>clearInterval(i)},[]);return t}
+function useTyping(l){const[i,setI]=useState(0),[n,setN]=useState(0),[d,setD]=useState(false);
+ useEffect(()=>{const w=l[i];let ms=d?30:65;if(!d&&n===w.length)ms=1500;const id=setTimeout(()=>{if(!d&&n===w.length)setD(true);else if(d&&n===0){setD(false);setI((i+1)%l.length)}else setN(n+(d?-1:1))},ms);return()=>clearTimeout(id)},[n,d,i]);return l[i].slice(0,n)}
+function useActive(){const[a,setA]=useState("");useEffect(()=>{const o=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&setA(e.target.id)),{rootMargin:"-40% 0px -55% 0px"});NAV.forEach(id=>{const e=document.getElementById(id);e&&o.observe(e)});return()=>o.disconnect()},[]);return a}
+function Count({to,pre="",suf="",dec=0}){const r=useRef(),[v,setV]=useState(0);
+ useEffect(()=>{const io=new IntersectionObserver(([e])=>{if(!e.isIntersecting)return;io.disconnect();const t0=performance.now();const f=t=>{const p=Math.min((t-t0)/1600,1);setV(to*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(f)};requestAnimationFrame(f)});io.observe(r.current);return()=>io.disconnect()},[]);
+ return h("b",{ref:r},pre+v.toFixed(dec)+suf)}
+function Tilt({children,className=""}){const r=useRef();
+ const mv=e=>{const b=r.current.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,y=(e.clientY-b.top)/b.height;r.current.style.transform=`perspective(900px) rotateY(${(x-.5)*8}deg) rotateX(${(.5-y)*8}deg)`;r.current.style.setProperty("--mx",x*100+"%");r.current.style.setProperty("--my",y*100+"%")};
+ return h("div",{ref:r,className:"glass card "+className,onMouseMove:mv,onMouseLeave:()=>r.current.style.transform=""},children)}
+const R=(i,c,k)=>h("div",{className:"rv "+(c||""),style:{"--d":i*90+"ms"},key:k},k===undefined?null:null);
+const Rv=(i,kids,key)=>h("div",{className:"rv",style:{"--d":i*90+"ms"},key},kids);
+function Fx(){useEffect(()=>{
+ const cv=document.getElementById("cv"),x=cv.getContext("2d"),m={x:-999,y:-999};let w,ht,P=[],col="#22d3ee",raf,f=0;
+ const rs=()=>{w=cv.width=innerWidth;ht=cv.height=innerHeight;P=Array.from({length:Math.min(95,Math.floor(w*ht/15000))},()=>({x:Math.random()*w,y:Math.random()*ht,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5}))};
+ const mm=e=>{const p=e.touches?e.touches[0]:e;m.x=p.clientX;m.y=p.clientY;const g=document.getElementById("glow");g.style.transform=`translate(${p.clientX}px,${p.clientY}px)`};
+ const sc=()=>{const d=document.documentElement;document.getElementById("prog").style.width=(scrollY/(d.scrollHeight-innerHeight||1))*100+"%"};
+ const draw=()=>{if(f++%90===0)col=getComputedStyle(document.documentElement).getPropertyValue("--p1").trim()||col;x.clearRect(0,0,w,ht);x.fillStyle=col;x.strokeStyle=col;
+  for(let i=0;i<P.length;i++){const a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>ht)a.vy*=-1;
+   const dm=Math.hypot(a.x-m.x,a.y-m.y);if(dm<170){x.globalAlpha=(1-dm/170)*.8;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(m.x,m.y);x.stroke();a.x+=(m.x-a.x)*.004;a.y+=(m.y-a.y)*.004}
+   x.globalAlpha=.7;x.beginPath();x.arc(a.x,a.y,1.6,0,7);x.fill();
+   for(let j=i+1;j<P.length;j++){const b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<125){x.globalAlpha=(1-d/125)*.3;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}
+  raf=requestAnimationFrame(draw)};
+ rs();draw();sc();addEventListener("resize",rs);addEventListener("mousemove",mm);addEventListener("touchmove",mm,{passive:true});addEventListener("scroll",sc,{passive:true});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+ const t=setTimeout(()=>document.querySelectorAll(".rv").forEach(e=>io.observe(e)),50);
+ return()=>{cancelAnimationFrame(raf);clearTimeout(t);removeEventListener("resize",rs);removeEventListener("mousemove",mm);removeEventListener("scroll",sc)}},[]);return null}
+function Boot(){const[p,setP]=useState(0);useEffect(()=>{const i=setInterval(()=>setP(v=>Math.min(v+4,100)),35);return()=>clearInterval(i)},[]);
+ return h("div",{className:"boot"+(p>=100?" off":"")},h("div",null,p<100?"INITIALIZING "+p+"%":"SYSTEM ONLINE"),h("div",{className:"bar"},h("i",{style:{width:p+"%"}})))}
+function Nav({active}){const[open,setOpen]=useState(false);const[dark,setDark]=useState(()=>!matchMedia("(prefers-color-scheme: light)").matches);
+ const flip=()=>{const n=!dark;setDark(n);document.documentElement.setAttribute("data-theme",n?"dark":"light")};
+ return h("nav",null,h("div",{className:"wrap",style:{position:"relative"}},h("div",{className:"glass"},
+  h("a",{className:"logo",href:"#top"},"SRIRANJANI.S"),
+  h("div",{className:"links"+(open?" open":"")},NAV.map(id=>h("a",{key:id,href:"#"+id,className:active===id?"on":"",onClick:()=>setOpen(false)},id[0].toUpperCase()+id.slice(1)))),
+  h("div",null,h("button",{className:"ib","aria-label":"Toggle theme",onClick:flip},dark?"☀":"☾"),h("button",{className:"ib burger","aria-label":"Menu","aria-expanded":open,onClick:()=>setOpen(!open)},open?"✕":"☰")))))}
+function Hero(){const role=useTyping(D.roles),t=useClock();
+ const time=t.toLocaleTimeString("en-IN",{timeZone:"Asia/Kolkata",hour12:false});
+ return h("section",{className:"hero",id:"top"},h("div",{className:"wrap"},
+  h("div",{className:"hg"},
+   h("div",null,h("span",{className:"pill"},h("i",{className:"dot"}),"CHENNAI · "+time+" IST"),
+    h("h1",{"data-text":"Sriranjani S"},"Sriranjani S"),
+    h("div",{className:"role"},"> "+role,h("i",null,"_")),
+    h("p",{className:"lead"},"Motivated software developer fresher with an 8.9 CGPA in ECE, shipping end-to-end solutions from machine learning to real-time embedded systems. Currently levelling up in Java Full Stack."),
+    h("div",{className:"btns"},h("a",{className:"btn pri",href:"#contact"},"Let's connect"),h("a",{className:"btn",href:"#projects"},"Explore projects"))),
+   h("div",{className:"orbit"},h("i",{className:"r r1"},h("b")),h("i",{className:"r r2"},h("b")),h("i",{className:"r r3"},h("b")),h("div",{className:"core"},"SS"))),
+  h("div",{className:"stats"},[[8.9,"","","CGPA (ECE)",1],[85,"","%+","ML accuracy",0],[200,"<","ms","alarm latency",0]].map(([a,pre,suf,l,dec])=>h("div",{className:"glass stat",key:l},h(Count,{to:a,pre,suf,dec}),h("span",null,l)))),
+  h("div",{className:"mq"},h("div",{className:"mt"},[...D.marquee,...D.marquee].map((s,i)=>h("span",{key:i},s))))))}
+const Sec=(id,n,title,kids)=>h("section",{id},h("div",{className:"wrap"},h("h2",{className:"rv"},h("small",null,n),title),kids));
+const Chips=l=>h("div",{className:"chips"},l.map(x=>h("span",{className:"chip",key:x},x)));
+const Ul=p=>h("ul",null,p.map(x=>h("li",{key:x},x)));
+function App(){const a=useActive();
+ return h(React.Fragment,null,h(Boot),h(Fx),h(Nav,{active:a}),h("main",null,h(Hero),
+ Sec("about","01","About",Rv(0,h("div",{className:"glass about"},h("b",null,"Software Developer fresher"),", with proven ability to ship end-to-end technical solutions. I built an ML academic-analytics system (85%+ accuracy) and a real-time embedded safety device, both delivered independently on schedule. I'm targeting a Software Developer / Engineer role at an MNC where I can create measurable impact from day one."))),
+ Sec("skills","02","Skills",h("div",{className:"g"},Object.entries(D.skills).map(([k,v],i)=>Rv(i,h(Tilt,null,h("h3",null,k.toUpperCase()),Chips(v)),k)))),
+ Sec("projects","03","Projects",h("div",{className:"g"},D.proj.map((p,i)=>Rv(i,h(Tilt,null,h("h3",null,p.t),h("div",{className:"meta"},h("span",null,p.d)),
+  h("div",{className:"m"},p.m.map(([n,pre,suf,l])=>h("div",{key:l},h(Count,{to:n,pre,suf}),h("span",null,l)))),Ul(p.p),Chips(p.g)),p.t)))),
+ Sec("training","04","Training & Courses",h("div",{className:"tl"},D.train.map((t,i)=>Rv(i,h(Tilt,null,h("h3",null,t.t),h("div",{className:"meta"},h("span",null,t.o),h("span",null,t.d)),Ul(t.p)),t.t)))),
+ Sec("education","05","Education & Certifications",h("div",null,
+  h("div",{className:"g"},D.edu.map(([t,s,d,g],i)=>Rv(i,h(Tilt,null,h("h3",null,t),h("div",{className:"meta"},h("span",null,s),h("span",null,d)),h("span",{className:"chip"},g)),t))),
+  h("div",{className:"sub rv"},"// CERTIFICATIONS & ACHIEVEMENTS"),
+  h("div",{className:"g"},D.cert.map(([t,s],i)=>Rv(i,h(Tilt,null,h("h3",null,t),h("div",{className:"meta",style:{margin:0}},h("span",null,s))),t))))),
+ Sec("contact","06","Contact",Rv(0,h("div",{className:"glass contact"},h("p",null,"Open to Software Developer and Engineer roles. Drop a message and let's build something."),
+  h("div",{className:"cg"},h("a",{href:"mailto:"+D.email},h("small",null,"Email"),D.email),h("a",{href:"tel:"+D.phone.replace(/\s/g,"")},h("small",null,"Phone"),D.phone),h("a",{href:D.li,target:"_blank",rel:"noopener"},h("small",null,"LinkedIn"),"linkedin.com/in/sriranjanisiva")))))),
+ h("footer",null,"© "+new Date().getFullYear()+" Sriranjani S · Chennai, Tamil Nadu"))}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
+</body>
+</html>
